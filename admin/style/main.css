@@ -1,0 +1,58 @@
+.bg-danger, .bg-success {
+  padding: 0 5px;
+}
+
+a {
+  color: #EF1F2F;
+  text-decoration: none;
+}
+
+.form__label, button {
+  font-family: brandon-grotesque, "Open Sans", open-sans, sans-serif;
+}
+
+.navbar {
+	color: #EF1F2F;
+	border-radius: 0px;
+	background-color: rgba(32, 32, 32, 1);
+	/*padding-bottom: 10%;*/
+	height: 25%;
+	color: white;
+	/*border-color: rgba(32, 32, 32, 1);*/
+}
+
+.navbar-text {
+
+}
+
+/* Cover Area style */
+.jumbotron
+{
+	font-family: brandon-grotesque, "Open Sans", open-sans, sans-serif;
+	color: #EF1F2F;
+	/*background: url('bg.png') no-repeat center center;*/
+	background-color: rgba(32, 32, 32, 1);
+	/*background-position: 0% 25%;*/
+	padding-top: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 10%;
+	color: white;
+}
+.container .jumbotron, .container-fluid .jumbotron {
+  border-radius: 0px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}

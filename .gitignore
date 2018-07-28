@@ -1,0 +1,12 @@
+*.txt
+*.json
+composer*
+
+uploads/*
+
+assets/*
+
+temps/*
+vendor/*
+path/*
+libs/libseq/vendor/

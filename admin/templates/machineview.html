@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="">
+
+  <title>Admin:About</title>
+
+  <link href="../style/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style/admin/font-awesome/css/font-awesome.min.css">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="../style/admin/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../style/admin/dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="../style/admin/ie-emulation-modes-warning.js"></script>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .icon-bar {
+      width: 100%;
+      background-color: #555;
+      overflow: auto;
+    }
+
+    .icon-bar a {
+      float: left;
+      width: 20%;
+      text-align: center;
+      padding: 12px 0;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 36px;
+    }
+
+    .icon-bar a:hover {
+      background-color: #000;
+    }
+
+    .active {
+      background-color: #4CAF50 !important;
+    }
+  </style>
+  <style>
+    #myInput {
+      background-image: url('/css/searchicon.png');
+      /* Add a search icon to input */
+      background-position: 10px 12px;
+      /* Position the search icon */
+      background-repeat: no-repeat;
+      /* Do not repeat the icon image */
+      width: 100%;
+      /* Full-width */
+      font-size: 16px;
+      /* Increase font-size */
+      padding: 12px 20px 12px 40px;
+      /* Add some padding */
+      border: 1px solid #ddd;
+      /* Add a grey border */
+      margin-bottom: 12px;
+      /* Add some space below the input */
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      /* Collapse borders */
+      width: 100%;
+      /* Full-width */
+      border: 1px solid #ddd;
+      /* Add a grey border */
+      font-size: 18px;
+      /* Increase font-size */
+    }
+
+    #myTable th,
+    #myTable td {
+      text-align: left;
+      /* Left-align text */
+      padding: 12px;
+      /* Add padding */
+    }
+
+    #myTable tr {
+      /* Add a bottom border to all table rows */
+      border-bottom: 1px solid #ddd;
+    }
+
+    #myTable tr.header,
+    #myTable tr:hover {
+      /* Add a grey background color to the table header and on hover */
+      background-color: #f1f1f1;
+    }
+  </style>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        td1 = tr[i].getElementsByTagName("td")[1];
+        if (td || td1) {
+          if ((td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1)) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#" marked="1">FXtract</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="admin.html" marked="1">Dashboard</a></li>
+          <li><a href="#" marked="1">Settings</a></li>
+          <li><a href="#" marked="1">Profile</a></li>
+          <li><a href="../logout.php" marked="1">Logout</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input class="form-control" placeholder="Search..." type="text">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+          <li><a href="admin.html" marked="1">Overview <span class="sr-only">(current)</span></a></li>
+          <li><a href="logs.html" marked="1">Logs</a></li>
+          <li><a href="activity.html" marked="1">Activity summary</a></li>
+          <!-- <li><a href="#" marked="1">Export</a></li> -->
+        </ul>
+        <ul class="nav nav-sidebar">
+          <li><a href="users.html" marked="1">Users</a></li>
+          <li><a href="projects.html" marked="1">Projects</a></li>
+          <li><a href="tools.html" marked="1">Tools</a></li>
+          <li class="active"><a href="machines.html" marked="1">Machines</a></li>
+          <!-- <li><a href="" marked="1">More navigation</a></li> -->
+        </ul>
+        <!-- <ul class="nav nav-sidebar">
+            <li><a href="" marked="1">Nav item again</a></li>
+            <li><a href="" marked="1">One more nav</a></li>
+            <li><a href="" marked="1">Another nav item</a></li>
+          </ul> -->
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">About Machine</h1>
+
+        <!-- <h2 class="sub-header">Users</h2> -->
+        <div class="table-responsive">
+
+          <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> -->
+
+          <table class="table table-striped" id="myTable">
+            <!-- <tr class="header">
+              <th style="width:40%;"></th>
+              <th style="width:30%;"></th> -->
+              <!-- <th style="width:30%;">Country</th> -->
+            <!-- </tr> -->
+            <tr>
+              <td>Full Name</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>User Name</td>
+              <td>Sweden</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>something@somewhere.com</td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Joined</td>
+              <td>20/09/17 17:40</td>
+            </tr>
+            <tr>
+              <td>Projects</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>No. of Manufactured Projects</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Shared Projects</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Collaborations</td>
+              <td>0</td>
+            </tr>
+          </table>
+          <div class="">
+            <!-- <input class="button btn btn-lg btn-primary" onclick="window.location.href='useredit.html'" value="Edit User" class="btn btn-primary btn-block btn-lg" tabindex="7">
+            <input class="button btn btn-lg btn-primary" onclick="window.location.href='users.html'" value="Cancel" class="btn btn-primary btn-block btn-lg" tabindex="8"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="icon-bar">
+      <a href="#"><i></i></a>
+      <a href="machines.html"><i class="fa fa-mail-reply"></i></a>
+      <a href="machinedit.html"><i class="fa fa-edit"></i></a>
+      <!-- <a href="#"><i class="fa fa-globe"></i></a> -->
+      <a href="#"><i class="fa fa-trash"></i></a>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../style/admin/jquery.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+  </script>
+  <script src="../style/admin/bootstrap.js"></script>
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <script src="../style/admin/holder.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../style/admin/ie10-viewport-bug-workaround.js"></script>
+
+
+</body>
+
+</html>
